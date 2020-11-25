@@ -1,0 +1,98 @@
+@import "../../less/variables.less";
+
+.app-setting {
+    .ivu-modal-body {
+        padding: 0;
+        height: 236px;
+    }
+    .ivu-layout,
+    .ivu-layout-sider,
+    .ivu-menu {
+        height: 100%;
+        background-color: white;
+    }
+    .ivu-menu-item {
+        color: rgba(0, 0, 0, 0.39);
+    }
+    .ivu-menu-item-active {
+        background: rgba(0, 0, 0, 0.04);
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .ivu-layout-sider {
+        width: 120px;
+    }
+    .app-settiong-content {
+        position: relative;
+        padding-left: 24px;
+    }
+    .general-setting {
+        .item {
+            width: 100%;
+            height: 48px;
+            padding-right: 16px;
+            line-height: 48px;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        p {
+            flex: 1;
+        }
+    }
+    .download-setting {
+        .label {
+            padding: 14px 0;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        .path {
+            width: 320px;
+            height: 48px;
+            margin-bottom: 8px;
+            border-radius: 2px;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            p {
+                padding: 0 8px;
+                flex: 1;
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+        .ivu-btn {
+            width: 62px;
+            height: 100%;
+        }
+    }
+    .update-setting {
+        padding-top: 24px;
+        text-align: center;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6);
+        .ivu-btn {
+            margin-top: 10px;
+            margin-bottom: 24px;
+        }
+    }
+    .radio {
+        width: 46px;
+        height: 24px;
+        transition: all 0.6s ease;
+        background-image: url(../../assets/images/app/radio-on.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+    .radio-off {
+        background-image: url(../../assets/images/app/radio-off.png);
+    }
+    .button-wrapper {
+        position: absolute;
+        bottom: 12px;
+        left: 48px;
+        .ivu-btn {
+            width: 86px;
+        }
+        .ivu-btn-primary {
+            margin-right: 44px;
+        }
+    }
+}

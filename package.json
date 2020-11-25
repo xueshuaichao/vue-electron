@@ -1,0 +1,74 @@
+{
+  "name": "wdc-pc",
+  "version": "1.1.1",
+  "private": true,
+  "description": "project description",
+  "author": "project author",
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service serve",
+    "electron:build": "vue-cli-service electron:build --win",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "iview": "^3.2.2",
+    "nedb": "^1.8.0",
+    "uuid": "^8.1.0",
+    "vue": "^2.5.10",
+    "vue-i18n": "^7.8.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@kazupon/vue-i18n-loader": "^0.3.0",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "deepmerge": "^2.1.1",
+    "electron": "5.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "vue-cli-plugin-electron-builder": "^1.4.5",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 version",
+    "not ie <= 9"
+  ],
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=6.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -E GIT_PARAMS"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "pretty-quick --staged",
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "__npminstall_done": false
+}
